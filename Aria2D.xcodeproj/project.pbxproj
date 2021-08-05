@@ -166,10 +166,6 @@
 		017557BC1F6CD18D004C02F3 /* StatusCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusCollectionViewItem.xib; sourceTree = "<group>"; };
 		01789B1A1D9C995300A5B789 /* NewTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
 		01842A4E2233672700BA77CB /* Aria2cProcessStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aria2cProcessStatusViewController.swift; sourceTree = "<group>"; };
-		018B8B50236277AF00276985 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/Mac/PromiseKit.framework; sourceTree = "<group>"; };
-		018B8B51236277AF00276985 /* PMKFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKFoundation.framework; path = Carthage/Build/Mac/PMKFoundation.framework; sourceTree = "<group>"; };
-		018B8B52236277AF00276985 /* PMKFoundation.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = PMKFoundation.framework.dSYM; path = Carthage/Build/Mac/PMKFoundation.framework.dSYM; sourceTree = "<group>"; };
-		018B8B53236277AF00276985 /* PromiseKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = PromiseKit.framework.dSYM; path = Carthage/Build/Mac/PromiseKit.framework.dSYM; sourceTree = "<group>"; };
 		018B9B571D72B2EA0087B71E /* WaitTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitTimer.swift; sourceTree = "<group>"; };
 		018E89491D34FF5B000C71B0 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		018E895F1D34FFA8000C71B0 /* Aria2c.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aria2c.swift; sourceTree = "<group>"; };
@@ -180,8 +176,6 @@
 		018E896C1D350075000C71B0 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		018E896D1D350075000C71B0 /* GeneralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		018F5C3B1F298E1900B2150A /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
-		0199420723378BB30045FDE9 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Carthage/Build/Mac/Sparkle.framework; sourceTree = "<group>"; };
-		0199420823378BB30045FDE9 /* Sparkle.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Sparkle.framework.dSYM; path = Carthage/Build/Mac/Sparkle.framework.dSYM; sourceTree = "<group>"; };
 		019BFF6221267A6400E715CC /* Aria2ErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aria2ErrorCode.swift; sourceTree = "<group>"; };
 		019C5CAC1EEA2E4D00B89B95 /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		019E3DB9215BBDEE00FDD1F8 /* MainListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListTableView.swift; sourceTree = "<group>"; };
@@ -495,14 +489,6 @@
 		6ACACE787527AEFD90491354 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01C85329241CA7D4006581F9 /* Starscream.framework */,
-				01C8532A241CA7D4006581F9 /* Starscream.framework.dSYM */,
-				018B8B51236277AF00276985 /* PMKFoundation.framework */,
-				018B8B52236277AF00276985 /* PMKFoundation.framework.dSYM */,
-				018B8B50236277AF00276985 /* PromiseKit.framework */,
-				018B8B53236277AF00276985 /* PromiseKit.framework.dSYM */,
-				0199420723378BB30045FDE9 /* Sparkle.framework */,
-				0199420823378BB30045FDE9 /* Sparkle.framework.dSYM */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
