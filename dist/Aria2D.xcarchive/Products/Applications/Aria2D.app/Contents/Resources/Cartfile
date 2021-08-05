@@ -1,0 +1,4 @@
+github "daltoniam/Starscream"
+github "sparkle-project/Sparkle"
+github "mxcl/PromiseKit"
+github "PromiseKit/Foundation"
