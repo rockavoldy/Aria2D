@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="101202" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1079,7 +1079,7 @@ CA
                                                                                 </connections>
                                                                             </button>
                                                                             <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xm6-Yn-mpD">
-                                                                                <rect key="frame" x="196" y="-2" width="133" height="25"/>
+                                                                                <rect key="frame" x="195" y="0.0" width="134" height="23"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" constant="130" id="HUF-O9-bac"/>
                                                                                 </constraints>
@@ -1796,11 +1796,11 @@ Gw
                                                     <rect key="frame" x="0.0" y="0.0" width="460" height="405"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="y12-II-h7D">
-                                                        <rect key="frame" x="0.0" y="0.0" width="460" height="390"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="460" height="405"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <outlineView verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" headerView="28Q-1E-IWj" indentationPerLevel="16" autosaveExpandedItems="YES" outlineTableColumn="5N7-Qz-UeY" id="B1M-ua-9CL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="491" height="367"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="491" height="382"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <size key="intercellSpacing" width="2" height="3"/>
                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1869,7 +1869,7 @@ Gw
                                                         <nil key="backgroundColor"/>
                                                     </clipView>
                                                     <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="pIO-b9-eki">
-                                                        <rect key="frame" x="0.0" y="390" width="460" height="15"/>
+                                                        <rect key="frame" x="0.0" y="389" width="460" height="16"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="VuS-MG-f0Q">
@@ -1892,11 +1892,11 @@ Gw
                                                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LN-4f-JZv">
                                                     <rect key="frame" x="0.0" y="0.0" width="460" height="405"/>
                                                     <clipView key="contentView" id="MGc-pu-rHK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="460" height="390"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="460" height="405"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="sequential" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" headerView="Hod-dK-d2Q" id="fj2-ke-JF8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="491" height="367"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="491" height="382"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1989,7 +1989,7 @@ Gw
                                                         </subviews>
                                                     </clipView>
                                                     <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Wpc-wR-WSr">
-                                                        <rect key="frame" x="0.0" y="390" width="460" height="15"/>
+                                                        <rect key="frame" x="0.0" y="389" width="460" height="16"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
                                                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="TLd-Qk-1vj">
@@ -2195,7 +2195,7 @@ DQ
                                         </connections>
                                     </textField>
                                     <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2GU-IG-tmK">
-                                        <rect key="frame" x="0.0" y="-2" width="263" height="25"/>
+                                        <rect key="frame" x="-1" y="-1" width="264" height="23"/>
                                         <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="qau-wS-mHP">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>

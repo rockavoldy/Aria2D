@@ -11,8 +11,8 @@
 /* Class = "NSTextFieldCell"; title = "Secret Token:"; ObjectID = "2NT-we-bqJ"; */
 "2NT-we-bqJ.title" = "Secret Token:";
 
-/* Class = "NSTextFieldCell"; title = "/jsonrpc"; ObjectID = "2Ri-Pv-dez"; */
-"2Ri-Pv-dez.title" = "/jsonrpc";
+/* Class = "NSTextFieldCell"; title = "/jsonrpc"; ObjectID = "aKX-Rm-b4y"; */
+"aKX-Rm-b4y.title" = "/jsonrpc";
 
 /* Class = "NSWindow"; title = "Window"; ObjectID = "35o-Pc-09f"; */
 "35o-Pc-09f.title" = "Window";
