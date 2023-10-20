@@ -1,0 +1,68 @@
+{
+  "images" : [
+    {
+      "filename" : "Aria2D Icon 7pt.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "7x7"
+    },
+    {
+      "filename" : "Aria2D Icon 7pt@2x.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "7x7"
+    },
+    {
+      "filename" : "Aria2D Icon 11pt.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "11x11"
+    },
+    {
+      "filename" : "Aria2D Icon 11pt@2x.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "11x11"
+    },
+    {
+      "filename" : "Aria2D Icon 24pt.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "24x24"
+    },
+    {
+      "filename" : "Aria2D Icon 24pt@2x.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "24x24"
+    },
+    {
+      "filename" : "Aria2D Icon 50pt.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "50x50"
+    },
+    {
+      "filename" : "Aria2D Icon 50pt@2x.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "50x50"
+    },
+    {
+      "filename" : "Aria2D Icon 100pt.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "100x100"
+    },
+    {
+      "filename" : "Aria2D Icon 100pt@2x.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "100x100"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
