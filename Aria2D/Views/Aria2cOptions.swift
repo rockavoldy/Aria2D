@@ -38,14 +38,13 @@ struct Aria2cOptions {
         case custom
     }
     
-    var customAria2c = ""
-    
-    let customBrewAria2c: String = {
+    var customAria2c: String = {
         do {
             return try safeShell("which aria2c")
         } catch { }
         return ""
     }()
+
     let defaultAria2cConf: String = {
         do {
             var url = try FileManager.default.url(for: .applicationSupportDirectory , in: .userDomainMask, appropriateFor: nil, create: true)
@@ -72,7 +71,7 @@ struct Aria2cOptions {
     func path(for selectablePaths: selectablePaths) -> String {
         switch selectablePaths {
         case .aria2c:
-            return customAria2c == "" ? customBrewAria2c : customAria2c
+            return customAria2c
         case .aria2cConf:
             switch selectedAria2cConf {
             case .default🙂:
@@ -87,14 +86,6 @@ struct Aria2cOptions {
     func selectedIndex(_ selectablePaths: selectablePaths) -> Int {
         switch selectablePaths {
         case .aria2c:
-            //            switch selectedAria2c {
-            //            case .internal🙂:
-            //                return 0
-            //            case .system:
-            //                return 1
-            //            case .custom:
-            //                return customAria2c == "" ? 0 : 2
-            //            }
             return 0
         case .aria2cConf:
             switch selectedAria2cConf {
@@ -124,7 +115,6 @@ struct Aria2cOptions {
         return NSKeyedArchiver.archivedData(withRootObject: Encoding(self))
     }
     
-    //    @objc(Encoding)
     @objc(_TtCV6Aria2D13Aria2cOptionsP33_AF457B311616EC08278CC3017ADC7BED8Encoding)
     private class Encoding: NSObject, NSCoding {
         
