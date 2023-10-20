@@ -43,7 +43,7 @@ class NewTaskViewController: NSViewController {
                                        .conditionalGet,
                                        .connectTimeout,
                                        .contentDispositionDefaultUtf8,
-                                       .continue🤣,
+                                       .continueStr,
                                        .dir,
                                        .dryRun,
                                        .enableHttpKeepAlive,

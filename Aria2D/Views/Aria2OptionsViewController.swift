@@ -229,7 +229,7 @@ class Aria2OptionsViewController: NSViewController, NSMenuDelegate {
         } else if menu == aria2cConfPathPopUpButton.menu {
             switch aria2cConfPathPopUpButton.indexOfSelectedItem {
             case 0:
-                Preferences.shared.aria2cOptions.selectedAria2cConf = .default🙂
+                Preferences.shared.aria2cOptions.selectedAria2cConf = .defaultStr
             case 1:
                 Preferences.shared.aria2cOptions.selectedAria2cConf = .custom
             default:

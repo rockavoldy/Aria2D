@@ -42,11 +42,6 @@ class Aria2c: NSObject {
             guard FileManager.default.fileExists(atPath: aria2cPath),
                 FileManager.default.isExecutableFile(atPath: aria2cPath),
                 FileManager.default.fileExists(atPath: confPath) else {
-                    
-                    
-                    let t = ""
-                    
-                    
                     return []
             }
             
@@ -113,20 +108,10 @@ class Aria2c: NSObject {
 	}
     
     func aria2cPaths() -> [String] {
-        let task = Process()
-        let pipe = Pipe()
-        task.standardOutput = pipe
-        task.launchPath = "/bin/bash"
-        task.arguments  = ["-l", "-c", "which aria2c"]
-        
-        task.launch()
-        task.waitUntilExit()
-        let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        if let output = String(data: data, encoding: .utf8) {
-            return output.components(separatedBy: "\n").filter({ $0 != "" })
-        } else {
-            return []
-        }
+        do {
+            return [try safeShell("which aria2c")]
+        } catch { }
+        return []
     }
     
     func checkCustomPath() -> Bool {
@@ -152,7 +137,7 @@ class Aria2c: NSObject {
     }
     
 	func createFiles() {
-		guard Preferences.shared.aria2cOptions.selectedAria2cConf == .default🙂 else { return }
+		guard Preferences.shared.aria2cOptions.selectedAria2cConf == .defaultStr else { return }
 		if !FileManager.default.fileExists(atPath: sessionPath) {
 			FileManager.default.createFile(atPath: sessionPath, contents: nil, attributes: nil)
 		}

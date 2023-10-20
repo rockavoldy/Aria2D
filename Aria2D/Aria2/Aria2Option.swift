@@ -25,7 +25,7 @@ struct Aria2Option: RawRepresentable, Hashable, Codable {
 		self.rawValue = string
 		switch valueType {
 		case .boolType:
-			self.valueType = .bool(bool: [.true🤣, .false😂])
+			self.valueType = .bool(bool: [.trueStr, .falseStr])
 		default:
 			self.valueType = valueType
 		}
@@ -62,9 +62,9 @@ struct Aria2Option: RawRepresentable, Hashable, Codable {
 	
 	// 40
 	enum constants: String {
-		case true🤣 = "true"
-		case false😂 = "false"
-		case default😅 = "default"
+		case trueStr = "true"
+		case falseStr = "false"
+		case defaultStr = "default"
 		case none = "none"
 		case mem = "mem"
 		case all = "all"
@@ -179,7 +179,7 @@ struct Aria2Option: RawRepresentable, Hashable, Codable {
 		case "connect-timeout": self = .connectTimeout
 		case "console-log-level": self = .consoleLogLevel
 		case "content-disposition-default-utf8": self = .contentDispositionDefaultUtf8
-		case "continue": self = .continue🤣
+		case "continue": self = .continueStr
 		case "daemon": self = .daemon
 		case "deferred-input": self = .deferredInput
 		case "dht-entry-point": self = .dhtEntryPoint
@@ -401,7 +401,7 @@ struct Aria2Option: RawRepresentable, Hashable, Codable {
 	static let connectTimeout = Aria2Option("connect-timeout", valueType: .number(min: 1, max: 600), type: .general)
 	static let consoleLogLevel = Aria2Option("console-log-level", valueType: .parameter(p: [.debug, .info, .notice, .warn, .error]), type: .general)
 	static let contentDispositionDefaultUtf8 = Aria2Option("content-disposition-default-utf8", valueType: .boolType, type: .httpRelated)
-	static let continue🤣 = Aria2Option("continue", valueType: .boolType, type: .general)
+	static let continueStr = Aria2Option("continue", valueType: .boolType, type: .general)
 	static let daemon = Aria2Option("daemon", valueType: .boolType, type: .general)
 	static let deferredInput = Aria2Option("deferred-input", valueType: .boolType, type: .general)
 	static let dhtEntryPoint = Aria2Option("dht-entry-point", valueType: .hostPort, type: .bitTorrentRelated)
@@ -420,7 +420,7 @@ struct Aria2Option: RawRepresentable, Hashable, Codable {
 	static let disableIpv6 = Aria2Option("disable-ipv6", valueType: .boolType, type: .general)
 	static let diskCache = Aria2Option("disk-cache", valueType: .unitNumber(min: UnitNumber("16M"), max: UnitNumber(0)), type: .general)
 	static let dnsTimeout = Aria2Option("dns-timeout", valueType: .number(min: 1, max: 60), type: .general)
-	static let downloadResult = Aria2Option("download-result", valueType: .parameter(p: [.default😅, .full, .hide]), type: .general)
+	static let downloadResult = Aria2Option("download-result", valueType: .parameter(p: [.defaultStr, .full, .hide]), type: .general)
 	static let dryRun = Aria2Option("dry-run", valueType: .boolType, type: .general)
 	static let dscp = Aria2Option("dscp", valueType: .number(min: 0, max: -1), type: .general)
 	static let enableAsyncDns6 = Aria2Option("enable-async-dns6", valueType: .boolType, type: .general)
@@ -434,8 +434,8 @@ struct Aria2Option: RawRepresentable, Hashable, Codable {
 	static let enableRpc = Aria2Option("enable-rpc", valueType: .boolType, type: .general)
 	static let eventPoll = Aria2Option("event-poll", valueType: .parameter(p: [.epoll, .select]), type: .general)
 	static let fileAllocation = Aria2Option("file-allocation", valueType: .parameter(p: [.prealloc, .falloc, .none]), type: .general)
-	static let followMetalink = Aria2Option("follow-metalink", valueType: .parameter(p: [.true🤣, .false😂, .mem]), type: .metalinkRelated)
-	static let followTorrent = Aria2Option("follow-torrent", valueType: .parameter(p: [.true🤣, .false😂, .mem]), type: .bitTorrentRelated)
+	static let followMetalink = Aria2Option("follow-metalink", valueType: .parameter(p: [.trueStr, .falseStr, .mem]), type: .metalinkRelated)
+	static let followTorrent = Aria2Option("follow-torrent", valueType: .parameter(p: [.trueStr, .falseStr, .mem]), type: .bitTorrentRelated)
 	static let forceSave = Aria2Option("force-save", valueType: .boolType, type: .general)
 	static let forceSequential = Aria2Option("force-sequential", valueType: .boolType, type: .general)
 	static let ftpPasswd = Aria2Option("ftp-passwd", valueType: .string(str: "PASSWD"), type: .ftpRelated)
@@ -560,7 +560,7 @@ struct Aria2Option: RawRepresentable, Hashable, Codable {
 	static let stderr = Aria2Option("stderr", valueType: .boolType, type: .general)
 	static let stop = Aria2Option("stop", valueType: .number(min: 0, max: Int(INT_MAX)), type: .general)
 	static let stopWithProcess = Aria2Option("stop-with-process", valueType: .number(min: 0, max: -1), type: .general)
-	static let streamPieceSelector = Aria2Option("stream-piece-selector", valueType: .parameter(p: [.default😅, .inorder]), type: .general)
+	static let streamPieceSelector = Aria2Option("stream-piece-selector", valueType: .parameter(p: [.defaultStr, .inorder]), type: .general)
 	static let summaryInterval = Aria2Option("summary-interval", valueType: .number(min: 0, max: Int(INT_MAX)), type: .general)
 	static let timeout = Aria2Option("timeout", valueType: .number(min: 1, max: 600), type: .general)
 	static let torrentFile = Aria2Option("torrent-file", valueType: .localFilePath, type: .bitTorrentRelated)

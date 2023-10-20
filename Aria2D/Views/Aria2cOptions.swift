@@ -16,10 +16,10 @@ func safeShell(_ command: String) throws -> String {
     task.standardOutput = pipe
     task.standardError = pipe
     task.arguments = ["-c", command]
-    task.executableURL = URL(fileURLWithPath: "/bin/zsh") //<--updated
+    task.executableURL = URL(fileURLWithPath: "/bin/zsh")
     task.standardInput = nil
 
-    try task.run() //<--updated
+    try task.run()
 
     let data = pipe.fileHandleForReading.readDataToEndOfFile()
     let output = String(data: data, encoding: .utf8)!
@@ -34,7 +34,7 @@ struct Aria2cOptions {
     }
     
     enum aria2cConfPaths: Int {
-        case default🙂
+        case defaultStr
         case custom
     }
     
@@ -56,7 +56,7 @@ struct Aria2cOptions {
     }()
     
     var customAria2cConf = ""
-    var selectedAria2cConf: aria2cConfPaths = .default🙂
+    var selectedAria2cConf: aria2cConfPaths = .defaultStr
     var lastPID = ""
     var lastLaunch = ""
     
@@ -74,7 +74,7 @@ struct Aria2cOptions {
             return customAria2c
         case .aria2cConf:
             switch selectedAria2cConf {
-            case .default🙂:
+            case .defaultStr:
                 return defaultAria2cConf
             case .custom:
                 return customAria2cConf == "" ? defaultAria2cConf : customAria2cConf
@@ -89,7 +89,7 @@ struct Aria2cOptions {
             return 0
         case .aria2cConf:
             switch selectedAria2cConf {
-            case .default🙂:
+            case .defaultStr:
                 return 0
             case .custom:
                 return customAria2cConf == "" ? 0 : 1
@@ -120,7 +120,7 @@ struct Aria2cOptions {
         
         var customAria2c = ""
         var customAria2cConf = ""
-        var selectedAria2cConf: aria2cConfPaths = .default🙂
+        var selectedAria2cConf: aria2cConfPaths = .defaultStr
         
         var lastPID = ""
         var lastLaunchPath = ""
@@ -136,7 +136,7 @@ struct Aria2cOptions {
         required init?(coder aDecoder: NSCoder) {
             self.customAria2c = aDecoder.decodeObject(forKey: "customAria2c") as? String ?? ""
             self.customAria2cConf = aDecoder.decodeObject(forKey: "customAria2cConf") as? String ?? ""
-            self.selectedAria2cConf = aria2cConfPaths(rawValue: aDecoder.decodeInteger(forKey: "selectedAria2cConf")) ?? .default🙂
+            self.selectedAria2cConf = aria2cConfPaths(rawValue: aDecoder.decodeInteger(forKey: "selectedAria2cConf")) ?? .defaultStr
             self.lastPID = aDecoder.decodeObject(forKey: "lastPID") as? String ?? ""
             self.lastLaunchPath = aDecoder.decodeObject(forKey: "lastLaunchPath") as? String ?? ""
         }
