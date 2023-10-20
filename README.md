@@ -5,6 +5,20 @@ Aria2D is a **Simple** Aria2 GUI for macOS.
 
 ![EFB0CEC1-86E8-44AE-BFEF-F87678EAE6E4.jpeg](https://i.loli.net/2018/11/21/5bf4f8c48657c.jpeg)
 
+## Building
+1. install xcpretty using gem
+    ```sh
+    sudo gem install xcpretty
+    ```
+2. Open `Aria2D.xcodeproj` using xcode
+3. Open Project Editor, open Tab `Signing & Capabilities`, change the Team with yours.
+4. Then change the Signing Certificate with `Sign to run locally`
+5. Open terminal, and run build script with make
+    ```sh
+    make build
+    ```
+6. Find the app inside `dist/macOS-Package/` directory
+
 ## Last Version
     1.3.3 (469)
 
