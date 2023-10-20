@@ -108,10 +108,23 @@ class Aria2c: NSObject {
 	}
     
     func aria2cPaths() -> [String] {
-        do {
-            return [try safeShell("which aria2c")]
-        } catch { }
-        return []
+        let task = Process()
+        let pipe = Pipe()
+
+        task.standardOutput = pipe
+        task.standardError = pipe
+        task.arguments = ["-l", "-c", "which", "aria2c"]
+        task.executableURL = URL(fileURLWithPath: "/bin/zsh")
+        task.standardInput = nil
+
+        task.launch()
+        task.waitUntilExit()
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        if let output = String(data: data, encoding: .utf8) {
+            return output.components(separatedBy: "\n").filter({ $0 != "" })
+        } else {
+            return []
+        }
     }
     
     func checkCustomPath() -> Bool {
