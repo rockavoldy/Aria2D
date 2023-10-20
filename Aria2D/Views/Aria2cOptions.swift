@@ -8,6 +8,25 @@
 
 import Foundation
 
+@discardableResult // Add to suppress warnings when you don't want/need a result
+func safeShell(_ command: String) throws -> String {
+    let task = Process()
+    let pipe = Pipe()
+
+    task.standardOutput = pipe
+    task.standardError = pipe
+    task.arguments = ["-c", command]
+    task.executableURL = URL(fileURLWithPath: "/bin/zsh") //<--updated
+    task.standardInput = nil
+
+    try task.run() //<--updated
+
+    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+    let output = String(data: data, encoding: .utf8)!
+
+    return output
+}
+
 struct Aria2cOptions {
     enum selectablePaths {
         case aria2c
@@ -21,6 +40,12 @@ struct Aria2cOptions {
     
     var customAria2c = ""
     
+    let customBrewAria2c: String = {
+        do {
+            return try safeShell("which aria2c")
+        } catch { }
+        return ""
+    }()
     let defaultAria2cConf: String = {
         do {
             var url = try FileManager.default.url(for: .applicationSupportDirectory , in: .userDomainMask, appropriateFor: nil, create: true)
@@ -47,7 +72,7 @@ struct Aria2cOptions {
     func path(for selectablePaths: selectablePaths) -> String {
         switch selectablePaths {
         case .aria2c:
-            return customAria2c
+            return customAria2c == "" ? customBrewAria2c : customAria2c
         case .aria2cConf:
             switch selectedAria2cConf {
             case .default🙂:
